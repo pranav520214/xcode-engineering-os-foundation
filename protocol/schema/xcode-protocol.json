@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xcode.dev/protocol/xcode-protocol.schema.json",
+  "title": "XCODE Protocol",
+  "type": "object",
+  "required": [
+    "requestId",
+    "taskId",
+    "sessionId",
+    "operation",
+    "payload",
+    "status",
+    "timestamp",
+    "protocolVersion"
+  ],
+  "properties": {
+    "requestId": { "type": "string" },
+    "taskId": { "type": "string" },
+    "sessionId": { "type": "string" },
+    "operation": { "type": "string" },
+    "payload": { "type": "object" },
+    "status": { "type": "string", "enum": ["OK", "ERROR", "PENDING", "RUNNING"] },
+    "error": { "type": ["string", "null"] },
+    "metadata": { "type": "object" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "protocolVersion": { "type": "string" }
+  },
+  "additionalProperties": true
+}

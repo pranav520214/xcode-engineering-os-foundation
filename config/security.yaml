@@ -1,0 +1,12 @@
+security:
+  policy_mode: strict
+  allow_network: false
+  allow_exec: false
+  require_human_approval_for_sensitive_ops: true
+  max_severity: high
+
+invariants:
+  - no_untrusted_code_without_validation
+  - no_secret_leakage
+  - no_unreviewed_shell_execution
+  - no_unsafe_file_overwrites

@@ -1,0 +1,26 @@
+providers:
+  ollama:
+    kind: ollama
+    enabled: true
+    base_url: http://localhost:11434
+    default_model: llama3.2
+  openai_compatible:
+    kind: openai_compatible
+    enabled: true
+    base_url: https://api.example.com/v1
+    default_model: gpt-4o-mini
+  local:
+    kind: local
+    enabled: true
+    default_model: local-heuristic
+
+routing:
+  default: ollama
+  fallback: openai_compatible
+  capabilities:
+    text_generation: true
+    streaming: true
+    tool_calling: true
+    vision: true
+    reasoning: true
+    embeddings: true
