@@ -1,0 +1,17 @@
+roles:
+  admin:
+    - project.read
+    - project.write
+    - security.validate
+    - tools.exec
+    - model.call
+  developer:
+    - project.read
+    - project.write
+    - tools.read
+    - model.call
+  reviewer:
+    - project.read
+    - security.review
+  guest:
+    - project.read

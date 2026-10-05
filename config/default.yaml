@@ -1,0 +1,23 @@
+project:
+  name: xcode
+  workspace_root: .
+  default_branch: main
+
+runtime:
+  environment: development
+  log_level: INFO
+  max_parallel_actions: 4
+
+memory:
+  working_capacity: 25000
+  session_capacity: 200000
+  long_term_capacity: 1000000
+
+context:
+  max_tokens: 64000
+  reserved_tokens: 8192
+  compression_threshold: 0.82
+
+security:
+  require_policy_validation: true
+  fail_on_high_severity: true

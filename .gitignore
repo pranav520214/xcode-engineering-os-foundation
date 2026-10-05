@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.coverage
+coverage.xml
+htmlcov/
+
+# C++ build
+cpp/build/
+cpp/bin/
+build/
+bin/
+*.obj
+*.o
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Java / Gradle build
+java/build/
+.gradle/
+*.class
+*.jar
+*.war
+
+# Environment & IDE
+.env
+.env.local
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+cmake-build-*/
